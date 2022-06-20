@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap%22");
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family:'Mull', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    height:100vh;
+    margin:0;
+}
+.container{
+    display: flex;
+    width: 90vw;
+}
+.panel{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height:80vh;
+    border-radius: 50px;
+    color: white;
+    cursor: pointer;
+    flex:0.5px;
+    margin: 10px;
+    position: relative;
+    transition: all 700ms ease-in;
+} 
+#panel-1{
+    background-image: url(images/bredge.jpg);
+}
+#panel-2{
+    background-image: url(images/forest.jpg);
+}
+#panel-3{
+    background-image: url(images/sea.jpg);
+}
+#panel-4{
+    background-image: url(images/photo-1551009175-8a68da93d5f9.jpg);
+}
+#panel-5{
+    background-image: url(images/images.jpg)
+}
+.panel h3{
+    font-size: 25px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    margin: 0;
+    opacity: 0;
+}
+.panel.active{
+    flex: 5;
+}
+.panel.active h3{
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.4s;
+}
+
+@media(max-width:480px){
+    .container{
+        width: 100vw;
+    }
+}
+
+
